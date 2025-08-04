@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Logo } from '@/components/ui/logo'
+import { Navbar } from '@/components/ui/navbar'
 import { 
   Plus, 
   Calendar, 
@@ -114,43 +116,11 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">P</span>
-                </div>
-                <span className="text-xl font-bold text-gray-900">PostPlanner</span>
-              </div>
-            </div>
-            
-            <nav className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm" asChild>
-                <Link href="/dashboard/analytics">
-                  <BarChart3 className="w-4 h-4 mr-2" />
-                  Analytics
-                </Link>
-              </Button>
-              <Button variant="ghost" size="sm" asChild>
-                <Link href="/dashboard/settings">
-                  <Settings className="w-4 h-4 mr-2" />
-                  Paramètres
-                </Link>
-              </Button>
-              <Button variant="ghost" size="sm">
-                <LogOut className="w-4 h-4 mr-2" />
-                Déconnexion
-              </Button>
-            </nav>
-          </div>
-        </div>
-      </header>
+      {/* Modern Navbar */}
+      <Navbar variant="dashboard" />
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 pt-24 pb-8">
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
           <div>

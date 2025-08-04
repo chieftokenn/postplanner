@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Logo } from '@/components/ui/logo'
+import { Navbar } from '@/components/ui/navbar'
 import { 
   ArrowLeft, 
   Linkedin, 
@@ -92,29 +94,19 @@ export default function CreatePostPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Link href="/dashboard" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
-                <ArrowLeft className="w-4 h-4" />
-                <span>Retour au dashboard</span>
-              </Link>
-            </div>
-            
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">P</span>
-              </div>
-              <span className="text-xl font-bold text-gray-900">PostPlanner</span>
-            </div>
-          </div>
-        </div>
-      </header>
+      {/* Modern Navbar */}
+      <Navbar variant="dashboard" />
+      
+      {/* Back Button */}
+      <div className="container mx-auto px-4 pt-24 pb-4">
+        <Link href="/dashboard" className="inline-flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors">
+          <ArrowLeft className="w-4 h-4" />
+          <span>Retour au dashboard</span>
+        </Link>
+      </div>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-4">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">

@@ -2,38 +2,17 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Calendar, Clock, TrendingUp, Zap, CheckCircle, Users, BarChart3 } from 'lucide-react'
+import { Logo } from '@/components/ui/logo'
+import { Navbar } from '@/components/ui/navbar'
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">P</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">PostPlanner</span>
-          </div>
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Fonctionnalités
-            </Link>
-            <Link href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Tarifs
-            </Link>
-            <Link href="/auth/login" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Connexion
-            </Link>
-            <Button asChild>
-              <Link href="/auth/register">Commencer gratuitement</Link>
-            </Button>
-          </nav>
-        </div>
-      </header>
+      {/* Modern Navbar */}
+      <Navbar variant="landing" />
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
+      <section className="container mx-auto px-4 pt-32 pb-20 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Planifiez vos posts

@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Logo } from '@/components/ui/logo'
 import { Linkedin, Twitter, Mail, Lock, Eye, EyeOff, User, CheckCircle } from 'lucide-react'
 
 export default function RegisterPage() {
@@ -57,11 +58,8 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Link href="/" className="inline-flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">P</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">PostPlanner</span>
+          <Link href="/">
+            <Logo size="md" />
           </Link>
         </div>
 
